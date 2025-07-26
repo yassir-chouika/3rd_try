@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, Mail } from "lucide-react";
+import {
+  ChevronDown,
+  Mail,
+  Home,
+  User,
+  FolderOpen,
+  Gamepad2,
+  Briefcase,
+} from "lucide-react";
+import ExpandableNavbar from "./NavBar";
 
 const HeroSection = () => {
   const [text, setText] = useState("");
@@ -17,9 +26,19 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const tabs = [
+    { title: "Home", icon: Home },
+    { title: "About", icon: User },
+    { title: "Projects", icon: FolderOpen },
+    { title: "Demo", icon: Gamepad2 },
+    { title: "Services", icon: Briefcase },
+    { title: "Contact", icon: Mail },
+  ];
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background elements */}
+      <ExpandableNavbar tabs={tabs} />
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
