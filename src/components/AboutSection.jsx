@@ -24,10 +24,10 @@ const AboutSection = ({ id }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-gray-800">
-              Passionate Frontend Developer
+              Passionate Web Developer
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              I'm a creative frontend developer with 2+ years of experience
+              I'm a creative developer with 2+ years of experience
               building modern, responsive web applications. I specialize in
               React, Tailwindcss, and creating seamless user experiences with
               attention to detail and performance optimization.

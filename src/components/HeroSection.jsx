@@ -9,10 +9,11 @@ import {
   Briefcase,
 } from "lucide-react";
 import ExpandableNavbar from "./NavBar";
+import { Link } from "react-scroll";
 
 const HeroSection = ({ id }) => {
   const [text, setText] = useState("");
-  const fullText = "Frontend Developer & UI/UX Enthusiast";
+  const fullText = "Web Developer & UI/UX Enthusiast";
 
   useEffect(() => {
     let i = 0;
@@ -74,27 +75,32 @@ const HeroSection = ({ id }) => {
           </p>
           <div className="flex justify-center space-x-6 mb-12">
             <a
-              href="#"
+              href="https://github.com/yassir-chouika"
+              target="_blank"
               className="bg-white/10 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
               <img src="/github.svg" alt="github icon" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/yassir-chouika-b88895295/"
+              target="_blank"
               className="bg-white/10 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
               <img src="/linkedin.svg" alt="linkedin icon" />
             </a>
             <a
-              href="#"
+              href="https://mail.google.com/mail/u/0/?to=yassir.chouika@gmail.com&fs=1&tf=cm"
+              target="_blank"
               className="bg-white/10 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-6 h-6" />
             </a>
           </div>
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-500 px-8 py-3 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            View My Work
-          </button>
+          <Link to="projectSection" smooth={true} duration={700} offset={-70}>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 px-8 py-3 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+              View My Work
+            </button>
+          </Link>
         </div>
       </div>
 

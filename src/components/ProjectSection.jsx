@@ -1,5 +1,4 @@
 import { ExternalLink } from "lucide-react";
-
 const ProjectsSection = ({ id }) => {
   const projects = [
     {
@@ -65,7 +64,7 @@ const ProjectsSection = ({ id }) => {
 
   return (
     <section id={id} className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div id="projectSection" className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
             Featured Projects
