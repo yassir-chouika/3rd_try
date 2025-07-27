@@ -11,15 +11,15 @@ function App() {
   return (
     <>
       <div className="overflow-hidden">
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <CRUDSection />
-        <ServicesSection />
+        <HeroSection id="home" />
+        <AboutSection id="about" />
+        <ProjectsSection id="project" />
+        <CRUDSection id="demo" />
+        <ServicesSection id="services" />
 
         <div className="relative">
           <div className="blur-sm">
-            <ContactSection />
+            <ContactSection id ="contact" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center  bg-opacity-30 pointer-events-none">
             <div className="bg-white rounded-lg shadow-xl p-8 max-w-md mx-4 text-center">

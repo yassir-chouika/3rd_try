@@ -1,6 +1,6 @@
 import { Calendar, MapPin } from "lucide-react";
 
-const AboutSection = () => {
+const AboutSection = ({ id }) => {
   const skills = [
     { name: "React", level: 95 },
     { name: "JavaScript", level: 85 },
@@ -14,7 +14,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id={id} className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">About Me</h2>

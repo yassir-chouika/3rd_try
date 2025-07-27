@@ -1,6 +1,6 @@
 import { Code2, Palette, Database, Star } from "lucide-react";
 
-const ServicesSection = () => {
+const ServicesSection = ({ id }) => {
   const services = [
     {
       icon: <Code2 className="w-8 h-8" />,
@@ -41,7 +41,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 text-white">
+    <section id={id} className="py-20 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Services</h2>

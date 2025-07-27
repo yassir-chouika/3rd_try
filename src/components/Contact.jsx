@@ -1,7 +1,7 @@
 import { useState } from "react";
-import {  Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
-const ContactSection = () => {
+const ContactSection = ({ id }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,7 +23,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-cyan-50 to-purple-50">
+    <section
+      id={id}
+      className="py-20 bg-gradient-to-br from-cyan-50 to-purple-50"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -57,7 +60,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">GitHub</p>
-                  <p className="text-gray-600">https://github.com/yassir-chouika</p>
+                  <p className="text-gray-600">
+                    https://github.com/yassir-chouika
+                  </p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -66,7 +71,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">LinkedIn</p>
-                  <p className="text-gray-600">https://www.linkedin.com/in/yassir-chouika-b88895295/</p>
+                  <p className="text-gray-600">
+                    https://www.linkedin.com/in/yassir-chouika-b88895295/
+                  </p>
                 </div>
               </div>
             </div>

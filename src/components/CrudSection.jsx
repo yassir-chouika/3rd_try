@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Database, Plus, Edit, Trash2, Save, X } from "lucide-react";
 
-const CRUDSection = () => {
+const CRUDSection = ({ id }) => {
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -89,7 +89,10 @@ const CRUDSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section
+      id={id}
+      className="py-20 bg-gradient-to-br from-gray-50 to-gray-100"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
