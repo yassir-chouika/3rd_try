@@ -25,15 +25,15 @@ const ContactSection = ({ id }) => {
   return (
     <section
       id={id}
-      className="py-20 bg-gradient-to-br from-cyan-50 to-purple-50"
+      className="py-20 bg-gradient-to-br from-cyan-50 to-purple-50 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Ready to start your next project? Let's discuss how we can work
             together to create something amazing.
           </p>
@@ -41,7 +41,7 @@ const ContactSection = ({ id }) => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
               Let's Connect
             </h3>
             <div className="space-y-6">
@@ -50,8 +50,12 @@ const ContactSection = ({ id }) => {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">Email</p>
-                  <p className="text-gray-600">yassir.chouika@gmail.com</p>
+                  <p className="font-semibold text-gray-800 dark:text-gray-100">
+                    Email
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    yassir.chouika@gmail.com
+                  </p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -59,8 +63,10 @@ const ContactSection = ({ id }) => {
                   <img src="/github.svg" alt="github icon" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">GitHub</p>
-                  <p className="text-gray-600">
+                  <p className="font-semibold text-gray-800 dark:text-gray-100">
+                    GitHub
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
                     https://github.com/yassir-chouika
                   </p>
                 </div>
@@ -70,8 +76,10 @@ const ContactSection = ({ id }) => {
                   <img src="/linkedin.svg" alt="linkedin icon" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">LinkedIn</p>
-                  <p className="text-gray-600">
+                  <p className="font-semibold text-gray-800 dark:text-gray-100">
+                    LinkedIn
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
                     https://www.linkedin.com/in/yassir-chouika-b88895295/
                   </p>
                 </div>
@@ -79,10 +87,10 @@ const ContactSection = ({ id }) => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-gray-900/50 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Name
                 </label>
                 <input
@@ -91,12 +99,12 @@ const ContactSection = ({ id }) => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email
                 </label>
                 <input
@@ -105,12 +113,12 @@ const ContactSection = ({ id }) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -119,7 +127,7 @@ const ContactSection = ({ id }) => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>

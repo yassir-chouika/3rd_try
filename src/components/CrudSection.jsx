@@ -91,26 +91,26 @@ const CRUDSection = ({ id }) => {
   return (
     <section
       id={id}
-      className="py-20 bg-gradient-to-br from-gray-50 to-gray-100"
+      className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
             CRUD Operations Demo
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Interactive task management system demonstrating Create, Read,
             Update, and Delete operations with real-time state management and
             modern UI components.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-gray-900/50 p-6">
           {/* Create Task Form */}
-          <div className="mb-8 p-6 bg-gradient-to-r from-cyan-50 to-purple-50 rounded-xl border border-cyan-100">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center">
-              <Plus className="w-5 h-5 mr-2 text-cyan-600" />
+          <div className="mb-8 p-6 bg-gradient-to-r from-cyan-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-xl border border-cyan-100 dark:border-gray-600">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100 flex items-center">
+              <Plus className="w-5 h-5 mr-2 text-cyan-600 dark:text-cyan-400" />
               Add New Task
             </h3>
             <div className="grid md:grid-cols-4 gap-4">
@@ -121,14 +121,14 @@ const CRUDSection = ({ id }) => {
                 onChange={(e) =>
                   setNewTask({ ...newTask, title: e.target.value })
                 }
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
               />
               <select
                 value={newTask.status}
                 onChange={(e) =>
                   setNewTask({ ...newTask, status: e.target.value })
                 }
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
               >
                 <option value="pending">Pending</option>
                 <option value="in-progress">In Progress</option>
@@ -139,7 +139,7 @@ const CRUDSection = ({ id }) => {
                 onChange={(e) =>
                   setNewTask({ ...newTask, priority: e.target.value })
                 }
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
               >
                 <option value="low">Low Priority</option>
                 <option value="medium">Medium Priority</option>
@@ -160,7 +160,7 @@ const CRUDSection = ({ id }) => {
             {tasks.map((task) => (
               <div
                 key={task.id}
-                className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors border border-gray-200"
+                className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600"
               >
                 {isEditing === task.id ? (
                   <div className="grid md:grid-cols-4 gap-4 items-center">
@@ -173,7 +173,7 @@ const CRUDSection = ({ id }) => {
                           title: e.target.value,
                         })
                       }
-                      className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
+                      className="px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
                     />
                     <select
                       value={editingTask.status}
@@ -183,7 +183,7 @@ const CRUDSection = ({ id }) => {
                           status: e.target.value,
                         })
                       }
-                      className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
+                      className="px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
                     >
                       <option value="pending">Pending</option>
                       <option value="in-progress">In Progress</option>
@@ -197,7 +197,7 @@ const CRUDSection = ({ id }) => {
                           priority: e.target.value,
                         })
                       }
-                      className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
+                      className="px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
                     >
                       <option value="low">Low Priority</option>
                       <option value="medium">Medium Priority</option>
@@ -221,7 +221,7 @@ const CRUDSection = ({ id }) => {
                 ) : (
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-800 mb-2">
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">
                         {task.title}
                       </h4>
                       <div className="flex space-x-2">
@@ -262,8 +262,8 @@ const CRUDSection = ({ id }) => {
           </div>
 
           {tasks.length === 0 && (
-            <div className="text-center py-12 text-gray-500">
-              <Database className="w-16 h-16 mx-auto mb-4 text-gray-300" />
+            <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+              <Database className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" />
               <p>No tasks yet. Create your first task above!</p>
             </div>
           )}

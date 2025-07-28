@@ -63,10 +63,10 @@ const ProjectsSection = ({ id }) => {
   ];
 
   return (
-    <section id={id} className="py-20 bg-white">
+    <section id={id} className="py-20 bg-white dark:bg-gray-900">
       <div id="projectSection" className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-amber-50 mb-4">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full"></div>
@@ -76,7 +76,7 @@ const ProjectsSection = ({ id }) => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2"
+              className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/50 hover:shadow-2xl dark:hover:shadow-gray-900/70 transition-all duration-300 overflow-hidden hover:-translate-y-2"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -88,24 +88,23 @@ const ProjectsSection = ({ id }) => {
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.github}
-                    className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-colors"
+                    className="bg-white/20 dark:bg-gray-900/30 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 dark:hover:bg-gray-900/50 transition-colors"
                   >
                     <img src="/github_black.svg" alt="github icon" />
                   </a>
                   <a
                     href={project.live}
-                    className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-colors"
+                    className="bg-white/20 dark:bg-gray-900/30 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 dark:hover:bg-gray-900/50 transition-colors"
                   >
                     <ExternalLink className="w-6 h-6 text-white" />
                   </a>
                 </div>
               </div>
-
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

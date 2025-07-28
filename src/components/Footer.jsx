@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-50 border-t border-gray-200">
+    <footer className="bg-slate-50 dark:bg-gray-900 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6 py-12">
         
         {/* Main content */}
@@ -21,7 +21,7 @@ const Footer = () => {
           
           {/* Left side - Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">Just a Footer</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-amber-50 mb-2">Just a Footer</h3>
             <p className="text-gray-600">Creating beautiful digital experiences</p>
           </div>
 

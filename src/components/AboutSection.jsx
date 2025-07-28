@@ -14,25 +14,25 @@ const AboutSection = ({ id }) => {
   ];
 
   return (
-    <section id={id} className="py-20 bg-gray-50">
+    <section id={id} className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-amber-50 mb-4">About Me</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-amber-50">
               Passionate Web Developer
             </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-500 mb-6 leading-relaxed">
               I'm a creative developer with 2+ years of experience
               building modern, responsive web applications. I specialize in
               React, Tailwindcss, and creating seamless user experiences with
               attention to detail and performance optimization.
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-500 mb-8 leading-relaxed">
               When I'm not coding, you'll find me exploring new technologies,
               contributing to open source projects, or sharing knowledge with
               the developer community.
@@ -51,17 +51,17 @@ const AboutSection = ({ id }) => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-amber-50">
               Skills & Technologies
             </h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
                 <div key={index} className="group">
                   <div className="flex justify-between mb-2">
-                    <span className="font-medium text-gray-700">
+                    <span className="font-medium text-gray-700 dark:text-gray-500">
                       {skill.name}
                     </span>
-                    <span className="text-gray-500">{skill.level}%</span>
+                    <span className="text-gray-500 dark:text-gray-600">{skill.level}%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                     <div

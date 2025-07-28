@@ -41,7 +41,7 @@ const HeroSection = ({ id }) => {
   return (
     <section
       id={id}
-      className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden"
+      className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden"
     >
       {/* Animated background elements */}
       <ExpandableNavbar
@@ -51,9 +51,9 @@ const HeroSection = ({ id }) => {
         onDarkModeToggle={() => setDarkMode(!darkMode)}
       />
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500 dark:bg-gray-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-20 dark:opacity-15 animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500 dark:bg-gray-800 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-20 dark:opacity-15 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-pink-500 dark:bg-gray-700 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-20 dark:opacity-15 animate-pulse delay-2000"></div>
       </div>
 
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">

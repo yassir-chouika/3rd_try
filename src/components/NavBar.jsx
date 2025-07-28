@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 // Expandable Navbar Component
 export default function ExpandableNavbar({
@@ -8,12 +9,13 @@ export default function ExpandableNavbar({
   activeColor = "text-blue-500",
   onChange,
   showDarkModeToggle = false,
-  isDarkMode = false,
-  onDarkModeToggle,
 }) {
   const [selected, setSelected] = useState(null);
   const navRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Only get theme values from the context
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   // Handle click outside to deselect
   useEffect(() => {
@@ -36,6 +38,7 @@ export default function ExpandableNavbar({
   const Separator = () => (
     <div className="mx-1 h-6 w-0.5 bg-gray-300 dark:bg-gray-600" />
   );
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -82,7 +85,7 @@ export default function ExpandableNavbar({
                 }}
                 className={`
                 relative flex items-center rounded-xl px-2 py-2 text-sm font-medium 
-                transition-all duration-300 ease-in-out
+                transition-all duration-300 ease-in-out cursor-pointer
                 ${
                   isSelected
                     ? `bg-gray-100 dark:bg-gray-800 ${activeColor} gap-2 px-4`
@@ -109,8 +112,8 @@ export default function ExpandableNavbar({
           <>
             <div className="mx-1 h-6 w-0.5 bg-gray-300 dark:bg-gray-600" />
             <button
-              onClick={onDarkModeToggle}
-              className="flex items-center rounded-xl px-2 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
+              onClick={toggleDarkMode}
+              className="flex items-center rounded-xl px-2 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 cursor-pointer"
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
