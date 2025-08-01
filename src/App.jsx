@@ -7,6 +7,7 @@ import ContactSection from "./components/Contact";
 import Footer from "./components/Footer";
 import { Construction } from "lucide-react";
 import { ThemeProvider } from "./context/ThemeContext";
+import QRcode from "./components/ResumeQRCode";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <ProjectsSection id="project" />
           <CRUDSection id="demo" />
           <ServicesSection id="services" />
-<ContactSection id="contact" />
+          <ContactSection id="contact" />
+          <QRcode />
           {/* <div className="relative">
             <div className="blur-sm">
               

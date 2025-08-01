@@ -42,7 +42,7 @@ export default function ExpandableNavbar({
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navbarHeight = 80; // Adjust based on your navbar height
+      const navbarHeight = 0; // Adjust based on your navbar height
       const elementPosition = element.offsetTop - navbarHeight;
       window.scrollTo({
         top: elementPosition,
