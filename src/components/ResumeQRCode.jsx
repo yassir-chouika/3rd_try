@@ -9,7 +9,7 @@ const ResumeQRCode = ({ id }) => {
   // resume URL
   const resumeUrl = "https://chyassirresume.vercel.app/";
   // resume file path (PDF or image)
-  const resumeFilePath = "/path/to/your/resume.pdf";
+  const resumeFilePath = "/resume.pdf";
 
   useEffect(() => {
     // Generate QR code using QR Server API 
@@ -41,7 +41,7 @@ const ResumeQRCode = ({ id }) => {
     // Create a download link for resume file
     const link = document.createElement("a");
     link.href = resumeFilePath;
-    link.download = "resume.pdf"; // or "resume.png" depending on file
+    link.download = "resume.pdf"; 
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
