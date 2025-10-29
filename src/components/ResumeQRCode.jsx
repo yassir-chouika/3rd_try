@@ -9,7 +9,7 @@ const ResumeQRCode = ({ id }) => {
   // resume URL
   const resumeUrl = "https://chyassirresume.vercel.app/";
   // resume file path (PDF or image)
-  const resumeFilePath = "/resume.pdf";
+  const resumeFilePath = "/CV_Yassir_Chouika_DeveloppeurWebMobile_2025.pdf";
 
   useEffect(() => {
     // Generate QR code using QR Server API 
@@ -41,7 +41,7 @@ const ResumeQRCode = ({ id }) => {
     // Create a download link for resume file
     const link = document.createElement("a");
     link.href = resumeFilePath;
-    link.download = "resume.pdf"; 
+    link.download = "CV_Yassir_Chouika_DeveloppeurWebMobile_2025.pdf"; 
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
